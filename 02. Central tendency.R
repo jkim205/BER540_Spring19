@@ -37,9 +37,3 @@ n <- length(data3)
 SS/(n-1)
 # sample variance of data
 var(data3)
-
-
-
-# Table 3.11
-data11 <- c(41, 65, 123, 46, 48, 877, 38, 90, 132, 115, 80, 80, 64, 59, 51, 36, 80, 143, 122, 100)
-
