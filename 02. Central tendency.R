@@ -21,11 +21,25 @@ wtd_mean <- weighted.mean(as.numeric(df$M), as.numeric(df$n))
 wtd_mean
 
 # table 3.3
-data <- c(2, 3, 4, 4, 5, 7, 8, 11, 12, 14, 18, 21, 21, 21, 26, 29, 29, 34, 34, 37, 44)
+data3 <- c(2, 3, 4, 4, 5, 7, 8, 11, 12, 14, 18, 21, 21, 21, 26, 29, 29, 34, 34, 37, 44)
 # mean, median, and mode
-mean(data)
-median(data)
+m <- mean(data3)
+median(data3)
 # mode is a little difficult to write a code, the following code means finding the index of a maximum point in the frequency table, and finding a correspondence variable.
-unique(data)[which.max(table(data))]
+unique(data3)[which.max(table(data3))]
 # mode(data) does not show the mode of data
-mode(data)
+mode(data3)
+
+# sum of squares in data3
+SS <- sum((data3-m)^2) 
+n <- length(data3)
+# sample variance
+SS/(n-1)
+# sample variance of data
+var(data3)
+
+
+
+# Table 3.11
+data11 <- c(41, 65, 123, 46, 48, 877, 38, 90, 132, 115, 80, 80, 64, 59, 51, 36, 80, 143, 122, 100)
+
