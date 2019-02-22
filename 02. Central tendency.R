@@ -1,5 +1,5 @@
 # Chapter 3 - Central tendency and Chapter 4 - Variability
-#
+# made by JJ Kim Feb. 21st 2019
 
 # Table 3.1 
 df <- data.frame(cbind(c("Lean", "Overweight", "Obese"), c(46, 58, 73), c(12, 14, 30)))
