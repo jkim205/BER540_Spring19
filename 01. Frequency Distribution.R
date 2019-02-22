@@ -1,5 +1,5 @@
 # File 01. Frequency distributions in Tables and Graphs
-# Chapter 2 of Statistics for the Behaviooral Sciences 2nd edition by Privitera
+# Chapter 2 of Statistics for the Behavioral Sciences 2nd edition by Privitera
 # made by JJ Kim Feb 15th 2019
 
 # table 2.1 data p. 32
