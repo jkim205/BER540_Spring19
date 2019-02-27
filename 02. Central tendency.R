@@ -77,4 +77,8 @@ pnorm(0, mean=0, sd=1)
 # this shows the percent from -1sd to 1sd in a standard normal distrubition
 pnorm(1)- pnorm(-1)
 
+# find a critical point
+qnorm(0.975)      # find the point to which probability becomes 0.975 from -inf 
+qnorm(0.95)       # find the point to which probability becomes 0.95 from -inf 
+
 rnorm(n=2) # random two numbers from normal distribution
