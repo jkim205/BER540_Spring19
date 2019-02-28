@@ -28,11 +28,15 @@ hist(zscore, breaks=30)
 
 sat_data <- c(500, 750, 600, 900, 950, 880, 990, 560, 780, 800, 800, 450, 800, 680, 550, 600)
 
-length(sat_data)     # sample size
-range(sat_data)      # min and max of the sample
-mu <- mean(sat_data)       # sample mean
-summary(sat_data)    # or use a summary function
+length(sat_data)              # sample size
+range(sat_data)               # min and max of the sample
+mu <- mean(sat_data)          # sample mean
+summary(sat_data)             # or use a summary function
 sigma <- sd(sat_data)         # standard deviation
 
 sat_zscore <- (sat_data - mu) / sigma                     # calculate z score
 cbind(sat_data, sat_zscore)
+
+zscore <- scale(sat_data)               # scale function automatically calculate zscore
+attr(zscore, "scaled:center")           # the scaled data stores the mean and the standard deviation of the original data.
+attr(zscore, "scaled:scale")
