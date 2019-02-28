@@ -1,3 +1,12 @@
+# T distribution vs. Normal distribution
+
+x <- seq(-3, 3, length.out = 1000)
+ndata <- dnorm(x, mean = 0, sd = 1)
+tdata_5 <- dt(x, df = 5)
+tdata_20 <- dt(x, df = 20)
+
+plot( c(x,x,x), c(ndata, tdata_5, tdata_20))
+
 # one sample t-test
 # input data
 ex1 <- c(-3, 0, -2, 0, -2, -2, -3, -1, -1, -1, 0, 0, -2, -1, -1, 0, 0, -1, -1, -2, 0, -2, -3, -3, -3, -2, 2, -3, -3, 0, -2, 0, 0, -3, -3, -2)
