@@ -5,7 +5,7 @@ ndata <- dnorm(x, mean = 0, sd = 1)
 tdata_5 <- dt(x, df = 5)
 tdata_20 <- dt(x, df = 20)
 
-plot(c(x,x,x), c(ndata, tdata_5, tdata_20), type = 'l', xlab = "standard deviation", ylab="density")
+plot(c(x,x,x), c(ndata, tdata_5, tdata_20), type = 'l', xlab = "standard deviation", ylab="density point")
 
 # t table
 crit_val = c(.25, .1, .05, .025, .01, .005)
