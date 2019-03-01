@@ -7,6 +7,18 @@ tdata_20 <- dt(x, df = 20)
 
 plot(c(x,x,x), c(ndata, tdata_5, tdata_20), type = 'l', xlab = "standard deviation", ylab="density")
 
+# t table
+crit_val = c(.25, .1, .05, .025, .01, .005)
+for (i in seq(1,10)){
+  a <- qt(crit_val, df=i, lower.tail = FALSE)
+  tab <- rbind(tab, qt(crit_val, df=i, lower.tail = FALSE))
+}
+tab  
+
+# table 9.3 
+score <- c(20, 60, 48, 92, 50, 82, 48, 90, 30, 68, 43, 54, 60, 62, 94, 67, 63, 85)
+t.test(score, mu= 77.43)
+
 # one sample t-test
 # input data
 ex1 <- c(-3, 0, -2, 0, -2, -2, -3, -1, -1, -1, 0, 0, -2, -1, -1, 0, 0, -1, -1, -2, 0, -2, -3, -3, -3, -2, 2, -3, -3, 0, -2, 0, 0, -3, -3, -2)
