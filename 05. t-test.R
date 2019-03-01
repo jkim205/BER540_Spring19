@@ -61,9 +61,10 @@ var(group2)        # sample variance
 sd(group2)         # standard deviation
 sem <- sd(group2) / sqrt(length(group2))    # standard error
 
-# two sample t-test 
-t.test(group1, group2)  # it shows the t statistics, df, and p-value
-t_result <- t.test(group1, group2)
+# two independent sample t-test 
+t_result <- t.test(group1, group2)  # it shows the t statistics, df, and p-value
+t_result
+str(t_result)
 
 # effect size
 eta_squared <- (t_result$statistic ^2) / (t_result$statistic^2 + t_result$parameter) 
@@ -74,3 +75,66 @@ omega_squared <- (t_result$statistic ^2 - 1) / (t_result$statistic^2 + t_result$
 
 library(lsr)
 cohensD(group1, group2)
+
+# The related-samples t Test or Paired t-test
+# Table 10.7
+present <- c(220, 245, 215, 260, 300, 280, 250, 310)
+absent <- c(210, 220, 195, 265, 275, 290, 220, 285)
+
+# summary of data in present condition
+length(present)     # sample size
+mean(present)       # sample mean
+sd(present)         # standard deviation
+sem <- sd(present) / sqrt(length(present))    # standard error
+sem
+
+# summary of data in absent condition
+length(absent)     # sample size
+mean(absent)       # sample mean
+sd(absent)         # standard deviation
+sem <- sd(absent) / sqrt(length(absent))    # standard error
+sem
+
+# use the difference between two conditions because it is related.
+diff <- present - absent
+
+mean(diff)       # sample mean
+sd(diff)         # standard deviation
+sem <- sd(diff) / sqrt(length(diff))    # standard error
+sem
+
+
+# t test
+t.test(diff)
+
+# Exercise 10.1
+color <- c(7,8,4,6,4,8,6,7,5,6,4,6,5,8,9,10,6,4,2,8,6,4)
+black <- c(4,4,6,4,6,2,3,3,6,9,5,7,5,3,0,0,8,6,6,4,2,1)
+
+# summary of data in color condition
+length(color)     # sample size
+mean(color)       # sample mean
+sd(color)         # standard deviation
+sem <- sd(color) / sqrt(length(color))    # standard error
+sem
+
+# summary of data in black condition
+length(black)     # sample size
+mean(black)       # sample mean
+sd(black)         # standard deviation
+sem <- sd(black) / sqrt(length(black))    # standard error
+sem
+
+# use the difference between two conditions because it is related.
+diff <- color - black
+
+mean(diff)       # sample mean
+sd(diff)         # standard deviation
+sem <- sd(diff) / sqrt(length(diff))    # standard error
+sem
+
+# t test
+t.test(diff)
+
+
+
