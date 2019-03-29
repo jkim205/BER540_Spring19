@@ -114,7 +114,14 @@ sem <- sd(diff) / sqrt(length(diff))    # standard error
 sem
 
 # t test
-t.test(diff)
+result <- t.test(diff)
 
 # or you can use t.test option of paired test
-t.test(color, black, paired = TRUE, val.equal = TRUE)
+result <- t.test(color, black, paired = TRUE, val.equal = TRUE)
+
+# effect size
+cohens_d <- (mean(diff)-0) / sd(diff)
+eta_squared <- (result$statistic ^2) / (result$statistic^2 + result$parameter) 
+omega_squared <- (result$statistic ^2 - 1) / (result$statistic^2 + result$parameter) 
+
+
